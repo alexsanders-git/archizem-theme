@@ -7,11 +7,17 @@
 	{{ function('wp_head') }}
 </head>
 <body>
+<div class="body-inner">
+	{{ include('partials/header.twig') }}
 
-{% block content %}
-	Sorry, no content
-{% endblock %}
+	<main>
+		{% block content %}
+			Sorry, no content
+		{% endblock %}
+	</main>
 
+	{{ include('partials/footer.twig') }}
+</div>
 {{ function('wp_footer') }}
 </body>
 </html>
