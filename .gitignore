@@ -2,7 +2,3 @@
 /vendor/
 /wordpress/
 .phpunit.result.cache
-/.idea
-/node_modules
-/image
-/.editorconfig
