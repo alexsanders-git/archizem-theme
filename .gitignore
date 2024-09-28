@@ -2,3 +2,13 @@
 /vendor/
 /wordpress/
 .phpunit.result.cache
+
+# IDE setting
+.idea
+.vscode
+
+# env files
+.env*
+
+# dependencies
+/node_modules
