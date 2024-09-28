@@ -1,4 +1,4 @@
-/.idea
-/node_modules
-/image
-/.editorconfig
+/composer.lock
+/vendor/
+/wordpress/
+.phpunit.result.cache
