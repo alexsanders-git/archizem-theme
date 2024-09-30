@@ -30,3 +30,6 @@ mix.sass('blocks/main-banner/main-banner.scss', 'blocks/main-banner')
 
 mix.sass('blocks/about-block/about-block.scss', 'blocks/about-block')
 	.sourceMaps();
+
+mix.sass('blocks/service-block/service-block.scss', 'blocks/service-block')
+	.sourceMaps();

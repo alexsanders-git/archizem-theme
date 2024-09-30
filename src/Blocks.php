@@ -49,6 +49,17 @@ class Blocks extends Site {
 			'mode' => 'edit',
 			'icon' => 'layout',
 		) );
+
+		acf_register_block_type( array(
+			'name' => 'service-block',
+			'title' => 'Service Block',
+			'description' => 'Service Block',
+			'render_callback' => array( $this, 'render_service_block' ),
+			'enqueue_style' => get_template_directory_uri() . '/blocks/service-block/service-block.css',
+			'category' => 'archizem',
+			'mode' => 'edit',
+			'icon' => 'layout',
+		) );
 	}
 
 	public function render_main_banner( $block, $content = '', $is_preview = false ) {
@@ -83,4 +94,19 @@ class Blocks extends Site {
 		Timber::render( 'blocks/about-block/about-block.twig', $context );
 	}
 
+	public function render_service_block( $block, $content = '', $is_preview = false ) {
+		$context = Timber::context();
+
+		// Store block values.
+		$context[ 'block' ] = $block;
+
+		// Store field values.
+		$context[ 'fields' ] = get_fields();
+
+		// Store $is_preview value.
+		$context[ 'is_preview' ] = $is_preview;
+
+		// Render the block.
+		Timber::render( 'blocks/service-block/service-block.twig', $context );
+	}
 }
