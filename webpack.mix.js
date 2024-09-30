@@ -27,3 +27,6 @@ mix.sass('assets/styles/scss/app.scss', 'assets/styles/css')
 // ACF Blocks
 mix.sass('blocks/main-banner/main-banner.scss', 'blocks/main-banner')
 	.sourceMaps();
+
+mix.sass('blocks/about-block/about-block.scss', 'blocks/about-block')
+	.sourceMaps();
