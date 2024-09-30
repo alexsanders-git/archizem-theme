@@ -1,0 +1,14 @@
+<section class="main-banner">
+	<div class="main-banner-background">
+		<img src="{{ fields.background_image.url }}" alt="{{ fields.background_image.alt }}">
+	</div>
+	<div class="container">
+		<div class="main-banner-wrapper">
+			<h1 class="main-banner-title">{{ fields.title }}</h1>
+			<a href="{{ fields.button.url }}" class="main-banner-button"
+				 target="{{ fields.button.target is defined and fields.button.target ? fields.button.target : '_self' }}">
+				{{ fields.button.title }}
+			</a>
+		</div>
+	</div>
+</section>

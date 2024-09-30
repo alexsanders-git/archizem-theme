@@ -19,6 +19,9 @@ class StarterSite extends Site {
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/twig/environment/options', [ $this, 'update_twig_environment_options' ] );
 
+		add_action( 'acf/init', array( $this, 'register_acf_blocks' ) );
+		add_filter( 'block_categories_all', [ $this, 'custom_block_category' ] );
+
 		parent::__construct();
 	}
 
@@ -42,6 +45,49 @@ class StarterSite extends Site {
 	public function register_taxonomies() {
 	}
 
+	/** Create custom block category */
+	function custom_block_category( $categories ) {
+		// Adding a new category.
+		$new_category = array(
+			'slug' => 'archizem',
+			'title' => 'Archizem'
+		);
+
+		array_splice( $categories, 0, 0, array( $new_category ) );
+
+		return $categories;
+	}
+
+	/** Registrations Blocks */
+	public function register_acf_blocks() {
+		acf_register_block_type( array(
+			'name' => 'main-banner',
+			'title' => 'Main Banner',
+			'description' => 'Main Banner',
+			'render_callback' => array( $this, 'render_main_banner' ),
+			'enqueue_style' => get_template_directory_uri() . '/blocks/main-banner/main-banner.css',
+			'category' => 'archizem',
+			'mode' => 'edit',
+			'icon' => 'layout',
+		) );
+	}
+
+	public function render_main_banner( $block, $content = '', $is_preview = false ) {
+		$context = Timber::context();
+
+		// Store block values.
+		$context[ 'block' ] = $block;
+
+		// Store field values.
+		$context[ 'fields' ] = get_fields();
+
+		// Store $is_preview value.
+		$context[ 'is_preview' ] = $is_preview;
+
+		// Render the block.
+		Timber::render( 'blocks/main-banner/main-banner.twig', $context );
+	}
+
 	/**
 	 * This is where you add some context
 	 *
@@ -51,14 +97,14 @@ class StarterSite extends Site {
 		/** Add logo */
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
 		$logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );
-		$context['site_logo'] = $logo_url;
+		$context[ 'site_logo' ] = $logo_url;
 
 		/** Other */
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::context();';
-		$context['menu'] = Timber::get_menu();
-		$context['site'] = $this;
+		$context[ 'foo' ] = 'bar';
+		$context[ 'stuff' ] = 'I am a value set in your functions.php file';
+		$context[ 'notes' ] = 'These values are available everytime you call Timber::context();';
+		$context[ 'menu' ] = Timber::get_menu();
+		$context[ 'site' ] = $this;
 
 		return $context;
 	}
