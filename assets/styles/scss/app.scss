@@ -1,4 +1,9 @@
 // Defaults
+@import 'defaults/media';
 @import 'defaults/fonts';
+@import 'defaults/mixings';
 @import 'defaults/general';
 @import 'defaults/variables';
+
+// Partials
+@import 'partials/header';

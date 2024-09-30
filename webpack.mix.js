@@ -6,6 +6,9 @@ mix.webpackConfig({
 	}
 });
 
+// JS
+mix.js('assets/js/scripts/*.js', 'assets/js/app.js');
+
 // SCSS
 mix.options({
 	// Don't perform any css url rewriting by default

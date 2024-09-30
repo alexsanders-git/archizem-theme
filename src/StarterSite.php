@@ -27,6 +27,7 @@ class StarterSite extends Site {
 	 */
 	public function theme_enqueue_scripts() {
 		wp_enqueue_style( 'app-style', get_template_directory_uri() . '/assets/styles/css/app.css' );
+		wp_enqueue_script( 'app-script', get_template_directory_uri() . '/assets/js/app.js' );
 	}
 
 	/**
@@ -47,11 +48,17 @@ class StarterSite extends Site {
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context[ 'foo' ] = 'bar';
-		$context[ 'stuff' ] = 'I am a value set in your functions.php file';
-		$context[ 'notes' ] = 'These values are available everytime you call Timber::context();';
-		$context[ 'menu' ] = Timber::get_menu();
-		$context[ 'site' ] = $this;
+		/** Add logo */
+		$custom_logo_id = get_theme_mod( 'custom_logo' );
+		$logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );
+		$context['site_logo'] = $logo_url;
+
+		/** Other */
+		$context['foo'] = 'bar';
+		$context['stuff'] = 'I am a value set in your functions.php file';
+		$context['notes'] = 'These values are available everytime you call Timber::context();';
+		$context['menu'] = Timber::get_menu();
+		$context['site'] = $this;
 
 		return $context;
 	}
@@ -108,6 +115,7 @@ class StarterSite extends Site {
 		);
 
 		add_theme_support( 'menus' );
+		add_theme_support( 'custom-logo' );
 	}
 
 	/**
