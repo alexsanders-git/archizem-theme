@@ -48,6 +48,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ibG9ja3MvbWFpbi1iYW5uZXIvbWFpbi1iYW5uZXIuc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hbGV4X3dlYnBhY2tfY29uZmlnLy4vYmxvY2tzL21haW4tYmFubmVyL21haW4tYmFubmVyLnNjc3M/N2M1YyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./blocks/main-banner/main-banner.scss\n");
 
+/***/ }),
+
+/***/ "./blocks/about-block/about-block.scss":
+/*!*********************************************!*\
+  !*** ./blocks/about-block/about-block.scss ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ibG9ja3MvYWJvdXQtYmxvY2svYWJvdXQtYmxvY2suc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hbGV4X3dlYnBhY2tfY29uZmlnLy4vYmxvY2tzL2Fib3V0LWJsb2NrL2Fib3V0LWJsb2NrLnNjc3M/NmNkMiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./blocks/about-block/about-block.scss\n");
+
 /***/ })
 
 /******/ 	});
@@ -149,6 +159,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/app": 0,
+/******/ 			"blocks/about-block/about-block": 0,
 /******/ 			"blocks/main-banner/main-banner": 0,
 /******/ 			"assets/styles/css/app": 0
 /******/ 		};
@@ -200,10 +211,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./assets/js/scripts/helpers.js")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./assets/js/scripts/mobile-menu.js")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./assets/styles/scss/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./blocks/main-banner/main-banner.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./assets/js/scripts/helpers.js")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./assets/js/scripts/mobile-menu.js")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./assets/styles/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./blocks/main-banner/main-banner.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/app"], () => (__webpack_require__("./blocks/about-block/about-block.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
