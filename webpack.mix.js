@@ -36,3 +36,6 @@ mix.sass('blocks/about-block/about-block.scss', 'blocks/about-block')
 
 mix.sass('blocks/service-block/service-block.scss', 'blocks/service-block')
 	.sourceMaps();
+
+mix.sass('blocks/projects-block/projects-block.scss', 'blocks/projects-block')
+	.sourceMaps();

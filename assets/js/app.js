@@ -30,6 +30,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hel
 
 /***/ }),
 
+/***/ "./blocks/projects-block/projects-block.scss":
+/*!***************************************************!*\
+  !*** ./blocks/projects-block/projects-block.scss ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ibG9ja3MvcHJvamVjdHMtYmxvY2svcHJvamVjdHMtYmxvY2suc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hbGV4X3dlYnBhY2tfY29uZmlnLy4vYmxvY2tzL3Byb2plY3RzLWJsb2NrL3Byb2plY3RzLWJsb2NrLnNjc3M/ZTBiYiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./blocks/projects-block/projects-block.scss\n");
+
+/***/ }),
+
 /***/ "./assets/styles/scss/app.scss":
 /*!*************************************!*\
   !*** ./assets/styles/scss/app.scss ***!
@@ -183,7 +193,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			"blocks/about-block/about-block": 0,
 /******/ 			"blocks/main-banner/main-banner": 0,
 /******/ 			"assets/styles/css/admin": 0,
-/******/ 			"assets/styles/css/app": 0
+/******/ 			"assets/styles/css/app": 0,
+/******/ 			"blocks/projects-block/projects-block": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -233,13 +244,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./assets/js/scripts/helpers.js")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./assets/js/scripts/mobile-menu.js")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./assets/styles/scss/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./assets/styles/scss/admin.scss")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./blocks/main-banner/main-banner.scss")))
-/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./blocks/about-block/about-block.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app"], () => (__webpack_require__("./blocks/service-block/service-block.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./assets/js/scripts/helpers.js")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./assets/js/scripts/mobile-menu.js")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./assets/styles/scss/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./assets/styles/scss/admin.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./blocks/main-banner/main-banner.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./blocks/about-block/about-block.scss")))
+/******/ 	__webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./blocks/service-block/service-block.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/service-block/service-block","blocks/about-block/about-block","blocks/main-banner/main-banner","assets/styles/css/admin","assets/styles/css/app","blocks/projects-block/projects-block"], () => (__webpack_require__("./blocks/projects-block/projects-block.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
