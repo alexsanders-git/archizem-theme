@@ -1,0 +1,13 @@
+<div class="projects-item">
+	{% if post.thumbnail %}
+		<div class="projects-item-image">
+			<img src="{{ post.thumbnail.src }}" alt="{{ post.title }}">
+		</div>
+	{% else %}
+		<div class="projects-item-image">
+			<img src="{{ theme.link }}/assets/images/default-image.jpg" alt="Default Image">
+		</div>
+	{% endif %}
+
+	<div class="projects-item-description">{{ post.content|excerpt(12) }}</div>
+</div>

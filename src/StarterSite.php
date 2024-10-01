@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Timber\PostQuery;
 use Timber\Site;
 use Timber\Timber;
 
@@ -36,12 +37,68 @@ class StarterSite extends Site {
 	 * This is where you can register custom post types.
 	 */
 	public function register_post_types() {
+		// Register the Projects custom post type
+		$labels = array(
+			'name' => __( 'Projects', 'archizem' ),
+			'singular_name' => __( 'Project', 'archizem' ),
+			'menu_name' => __( 'Projects', 'archizem' ),
+			'name_admin_bar' => __( 'Project', 'archizem' ),
+			'add_new' => __( 'Add New', 'archizem' ),
+			'add_new_item' => __( 'Add New Project', 'archizem' ),
+			'new_item' => __( 'New Project', 'archizem' ),
+			'edit_item' => __( 'Edit Project', 'archizem' ),
+			'view_item' => __( 'View Project', 'archizem' ),
+			'all_items' => __( 'All Projects', 'archizem' ),
+			'search_items' => __( 'Search Projects', 'archizem' ),
+			'parent_item_colon' => __( 'Parent Projects :', 'archizem' ),
+			'not_found' => __( 'No projects found.', 'archizem' ),
+			'not_found_in_trash' => __( 'No projects found in Trash.', 'archizem' ),
+		);
+
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'rewrite' => array( 'slug' => 'projects' ),
+			'supports' => array( 'title', 'editor', 'thumbnail' ),
+			'menu_icon' => 'dashicons-analytics',
+			'menu_position' => 5,
+			'capability_type' => 'post',
+		);
+
+		register_post_type( 'projects', $args );
 	}
 
 	/**
 	 * This is where you can register custom taxonomies.
 	 */
 	public function register_taxonomies() {
+		// Labels for the custom taxonomy
+		$labels = array(
+			'name' => __( 'Types', 'archizem' ),
+			'singular_name' => __( 'Type', 'archizem' ),
+			'menu_name' => __( 'Types', 'archizem' ),
+			'all_items' => __( 'All Types', 'archizem' ),
+			'edit_item' => __( 'Edit Type', 'archizem' ),
+			'view_item' => __( 'View Type', 'archizem' ),
+			'update_item' => __( 'Update Type', 'archizem' ),
+			'add_new_item' => __( 'Add New Type', 'archizem' ),
+			'new_item_name' => __( 'New Type Name', 'archizem' ),
+			'search_items' => __( 'Search Types', 'archizem' ),
+			'not_found' => __( 'No types found', 'archizem' ),
+		);
+
+		// Arguments for the custom taxonomy
+		$args = array(
+			'labels' => $labels,
+			'hierarchical' => true, // Set to true for a category-like taxonomy
+			'public' => true,
+			'show_admin_column' => true,
+			'rewrite' => array( 'slug' => 'type' ),
+		);
+
+		// Register the taxonomy
+		register_taxonomy( 'type', array( 'projects' ), $args );
 	}
 
 	/**
@@ -54,6 +111,28 @@ class StarterSite extends Site {
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
 		$logo_url = wp_get_attachment_image_url( $custom_logo_id, 'full' );
 		$context[ 'site_logo' ] = $logo_url;
+
+		/** Project Type Taxonomy */
+		$args = array(
+			'post_type' => 'projects',
+			'post_status' => 'publish',
+			'posts_per_page' => -1,
+			'orderby' => 'name',
+			'order' => 'ASC',
+			'taxonomy' => 'type',
+		);
+
+		$projects_type = get_categories( $args );
+
+		$context[ 'projects_type' ] = $projects_type;
+
+		/** Get Projects Posts */
+		$query = [
+			'post_type' => 'projects',
+			'posts_per_page' => 12,
+		];
+
+		$context[ 'posts' ] = Timber::get_posts( $query );
 
 		/** Other */
 		$context[ 'foo' ] = 'bar';
