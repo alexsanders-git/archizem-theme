@@ -1,0 +1,51 @@
+<header class="header">
+	<div class="container">
+		<div class="header-wrapper">
+			<nav class="header-menu">
+				<ul class="menu">
+					{% for item in menu.get_items %}
+						<li id="menu-item-{{ item.id }}" class="menu-item {{ item.current ? 'active' }}">
+							<a href="{{ item.link }}">{{ item.title }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+				<div class="header-close">
+					<button>
+						<img src="{{ site.theme.link }}/assets/images/icon-close.svg" alt="Close menu icon">
+					</button>
+				</div>
+			</nav>
+
+			<div class="header-logo">
+				{% if site_logo %}
+					<a href="{{ site.url }}" class="header-logo-name">
+						<img src="{{ site_logo }}" alt="{{ site.name }} logo">
+					</a>
+				{% else %}
+					<a href="{{ site.url }}" class="header-logo-name">
+						<p>{{ site.name }}</p>
+					</a>
+				{% endif %}
+			</div>
+
+			<div class="header-contacts">
+				<div class="header-contacts-link">
+					<a href="tel:+380951234567">+38 095 123 45 67</a>
+				</div>
+
+				<div class="header-contacts-button">
+					<a href="tel:+380951234567">
+						<img src="{{ site.theme.link }}/assets/images/icon-phone.svg" alt="Phone icon">
+					</a>
+				</div>
+
+				<div class="header-burger">
+					<button>
+						<img src="{{ site.theme.link }}/assets/images/icon-burger.svg" alt="Burger menu icon">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

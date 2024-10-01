@@ -1,0 +1,38 @@
+<section class="projects section">
+	<div class="container container-xl">
+		<div class="projects-content">
+			{% include 'partials/breadcrumbs.twig' %}
+
+			<div class="projects-info">
+				<h1 class="projects-title">{{ fields.title is not empty ? fields.title : post.title }}</h1>
+
+				{% if fields.description %}
+					<div class="projects-description">{{ fields.description }}</div>
+				{% endif %}
+
+				<div class="projects-type">
+					<button class="projects-type-button active" data-type="all">{{ __( 'All', 'archizem' ) }}</button>
+
+					{% for item in projects_type %}
+						<button class="projects-type-button" data-type="{{ item.slug }}">
+							{{ item.name }}
+						</button>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		{% if posts is not empty %}
+			<div class="projects-list">
+				{% for post in posts %}
+					{% include 'partials/projects-item.twig' %}
+				{% endfor %}
+			</div>
+
+			<div class="alert"></div>
+		{% else %}
+			<p class="projects-not-found">Projects not found.</p>
+		{% endif %}
+
+	</div>
+</section>

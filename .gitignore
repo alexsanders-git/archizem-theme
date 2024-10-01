@@ -1,4 +1,15 @@
-/.idea
+/composer.lock
+/vendor/
+/wordpress/
+.phpunit.result.cache
 /node_modules
-/image
-/.editorconfig
+
+# IDE setting
+.idea
+.vscode
+
+# env files
+.env*
+
+# dependencies
+/node_modules

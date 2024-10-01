@@ -1,0 +1,75 @@
+.main-banner {
+  position: relative;
+  padding: 344px 0 264px 0;
+}
+.main-banner:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.main-banner-background {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+.main-banner-wrapper {
+  position: relative;
+  text-align: center;
+}
+.main-banner-title {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-color);
+}
+.main-banner-button {
+  margin-top: 42px;
+  padding: 25px 40px;
+  background: var(--green-color);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white-color);
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-banner-button:hover {
+  background: var(--green-hover-color);
+}
+@media only screen and (max-width: 1200px) {
+  .main-banner {
+    padding: 200px 0;
+  }
+  .main-banner-title {
+    max-width: 800px;
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-banner {
+    padding: 150px 0;
+  }
+  .main-banner-title {
+    font-size: 42px;
+  }
+  .main-banner-button {
+    padding: 20px 30px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .main-banner {
+    padding: 100px 0;
+  }
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html {{ site.language_attributes }}>
+<head>
+	<meta charset="{{ site.charset }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen"/>
+	{{ function('wp_head') }}
+</head>
+<body class="{{ body_class }}">
+<div class="body-inner">
+	{{ include('partials/header.twig') }}
+
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
+
+	{{ include('partials/footer.twig') }}
+</div>
+{{ function('wp_footer') }}
+</body>
+</html>

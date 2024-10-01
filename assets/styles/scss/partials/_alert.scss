@@ -1,0 +1,24 @@
+.alert {
+  display: none;
+  position: relative;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+
+  &.show {
+    display: block;
+  }
+
+  &-error {
+    color: #842029;
+    background-color: #F8D7DA;
+    border-color: #F5C2C7;
+  }
+
+  &-success {
+    color: #0F5132;
+    background-color: #D1E7DD;
+    border-color: #BADBCC;
+  }
+}
