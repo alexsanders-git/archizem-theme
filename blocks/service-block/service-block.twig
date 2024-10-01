@@ -1,0 +1,22 @@
+<section class="service section">
+	<div class="container container-xl">
+		<div class="service-grid">
+			{% for item in fields.grid %}
+				<div class="service-item">
+					<div class="service-holder">
+						{% if item.type == 'image' %}
+							<img src="{{ item.image.url }}" alt="{{ item.image.alt }}">
+						{% else %}
+							<video autoplay muted loop playsinline>
+								<source src="{{ item.video.url }}" type="{{ item.video.mime_type }}">
+								Your browser does not support the video tag.
+							</video>
+						{% endif %}
+					</div>
+
+					<span class="service-item-title">{{ item.title }}</span>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

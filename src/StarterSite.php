@@ -14,6 +14,7 @@ class StarterSite extends Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'theme_enqueue_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
@@ -25,6 +26,10 @@ class StarterSite extends Site {
 	public function theme_enqueue_scripts() {
 		wp_enqueue_style( 'app-style', get_template_directory_uri() . '/assets/styles/css/app.css' );
 		wp_enqueue_script( 'app-script', get_template_directory_uri() . '/assets/js/app.js' );
+	}
+
+	public function admin_enqueue_scripts() {
+		wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/assets/styles/css/admin.css' );
 	}
 
 	/**

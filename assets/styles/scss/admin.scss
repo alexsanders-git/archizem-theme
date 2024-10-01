@@ -1,0 +1,81 @@
+.as-2-columns,
+.as-3-columns,
+.as-4-columns,
+.as-5-columns,
+.as-6-columns {
+
+  & > .acf-input > .acf-repeater > .acf-table {
+    display: flex;
+    flex-direction: column;
+
+    & > tbody {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > .acf-row .acf-fields {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.as-2-columns {
+  & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    width: 100%;
+    max-width: 50%;
+  }
+}
+
+
+.as-3-columns {
+  & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    width: 100%;
+    max-width: 33%;
+  }
+}
+
+.as-4-columns {
+  & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    width: 100%;
+    max-width: 25%;
+  }
+}
+
+.as-5-columns {
+  & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    width: 100%;
+    max-width: 20%;
+  }
+}
+
+.as-6-columns {
+  & > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+    width: 100%;
+    max-width: 16.66%;
+  }
+}
+
+// Admin Panel
+html body :where(.wp-block) {
+  max-width: 100%;
+  width: 100%;
+}
+
+.acf-block-body .acf-block-fields {
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-styles-wrapper {
+  .wp-block-image,
+  .block-editor-rich-text__editable,
+  .block-editor-block-list__block,
+  .block-list-appender {
+    width: 100%;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

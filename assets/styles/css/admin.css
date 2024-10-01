@@ -1,0 +1,70 @@
+.as-2-columns > .acf-input > .acf-repeater > .acf-table,
+.as-3-columns > .acf-input > .acf-repeater > .acf-table,
+.as-4-columns > .acf-input > .acf-repeater > .acf-table,
+.as-5-columns > .acf-input > .acf-repeater > .acf-table,
+.as-6-columns > .acf-input > .acf-repeater > .acf-table {
+  display: flex;
+  flex-direction: column;
+}
+.as-2-columns > .acf-input > .acf-repeater > .acf-table > tbody,
+.as-3-columns > .acf-input > .acf-repeater > .acf-table > tbody,
+.as-4-columns > .acf-input > .acf-repeater > .acf-table > tbody,
+.as-5-columns > .acf-input > .acf-repeater > .acf-table > tbody,
+.as-6-columns > .acf-input > .acf-repeater > .acf-table > tbody {
+  display: flex;
+  flex-wrap: wrap;
+}
+.as-2-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row .acf-fields,
+.as-3-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row .acf-fields,
+.as-4-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row .acf-fields,
+.as-5-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row .acf-fields,
+.as-6-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row .acf-fields {
+  width: 100% !important;
+}
+
+.as-2-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+  width: 100%;
+  max-width: 50%;
+}
+
+.as-3-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+  width: 100%;
+  max-width: 33%;
+}
+
+.as-4-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+  width: 100%;
+  max-width: 25%;
+}
+
+.as-5-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+  width: 100%;
+  max-width: 20%;
+}
+
+.as-6-columns > .acf-input > .acf-repeater > .acf-table > tbody > .acf-row {
+  width: 100%;
+  max-width: 16.66%;
+}
+
+html body :where(.wp-block) {
+  max-width: 100%;
+  width: 100%;
+}
+
+.acf-block-body .acf-block-fields {
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-styles-wrapper .wp-block-image,
+.editor-styles-wrapper .block-editor-rich-text__editable,
+.editor-styles-wrapper .block-editor-block-list__block,
+.editor-styles-wrapper .block-list-appender {
+  width: 100%;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}

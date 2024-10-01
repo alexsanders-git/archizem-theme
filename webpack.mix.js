@@ -24,6 +24,9 @@ mix.options({
 mix.sass('assets/styles/scss/app.scss', 'assets/styles/css')
 	.sourceMaps();
 
+mix.sass('assets/styles/scss/admin.scss', 'assets/styles/css')
+	.sourceMaps();
+
 // ACF Blocks
 mix.sass('blocks/main-banner/main-banner.scss', 'blocks/main-banner')
 	.sourceMaps();

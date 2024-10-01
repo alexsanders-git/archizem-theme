@@ -20,3 +20,9 @@ Timber::init();
 
 new StarterSite();
 new Blocks();
+
+function dump( $data ) {
+	echo '<pre>';
+	print_r( $data );
+	echo '</pre>';
+}
